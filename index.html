@@ -4,57 +4,77 @@
 <meta charset="UTF-8">
 <title>Para o Meu Amor 💖</title>
 <style>
+  /* Fundo com a foto dela */
   body {
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
     color: #fff;
-    padding: 50px;
+    height: 100vh;
+    background: url('foto-fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
+
+  /* Camada semi-transparente para o texto */
+  .overlay {
+    background-color: rgba(0,0,0,0.5); /* deixa o fundo mais escuro para o texto aparecer */
+    padding: 50px;
+    min-height: 100vh;
+  }
+
   h1 {
     font-size: 3em;
     margin-bottom: 20px;
   }
+
   p {
     font-size: 1.3em;
     margin-bottom: 40px;
   }
+
   .heart {
     font-size: 5em;
     animation: pulse 1s infinite;
   }
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
   }
+
+  /* Galeria de fotos */
   .gallery img {
     width: 200px;
     margin: 10px;
     border-radius: 10px;
     transition: transform 0.3s;
   }
+
   .gallery img:hover {
     transform: scale(1.1);
   }
 </style>
 </head>
 <body>
-<h1>Para você, meu amor 💕</h1>
-<p>Você é a melhor parte da minha vida. Obrigado por existir!</p>
-<div class="heart">❤️</div>
+<div class="overlay">
+  <h1>Para você, meu amor 💕</h1>
+  <p>Você é a melhor parte da minha vida. Obrigado por existir!</p>
+  <div class="heart">❤️</div>
 
-<h2>Momentos juntos 📸</h2>
-<div class="gallery">
-  <img src="eu1.jpg" alt="Eu">
-  <img src="ela1.jpg" alt="Vc">
+  <h2>Nós dois <3 📸</h2>
+  <div class="gallery">
+    <img src="eu1.jpg" alt="Eu">
+    <img src="ela1.jpg" alt="Você">
+  </div>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <p>Te amo para sempre! 💖</p>
 </div>
-
-<!-- Música de fundo -->
-<audio autoplay loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
-
-<p>Te amo para sempre! 💖</p>
 </body>
 </html>
